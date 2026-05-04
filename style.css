@@ -112,15 +112,39 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #1e293b; col
 footer p { margin-bottom: 5px; }
 
 /* --- RESPONSIVIDADE --- */
+@media (max-width: 1024px) {
+    .container { padding: 0 20px; }
+    .hero-content { gap: 30px; }
+    .hero-image img { width: 100%; max-width: 320px; }
+    #trajetoria h2 { font-size: 2.2rem; }
+    .alura-badge { padding: 18px 30px; gap: 12px; }
+}
+
 @media (max-width: 768px) {
+    header { flex-direction: column; align-items: flex-start; gap: 18px; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; }
+    nav a { margin: 0; font-size: 0.95rem; }
+    #hero { padding: 60px 0 90px; }
+    .hero-content { flex-direction: column; align-items: center; }
+    .hero-text { max-width: 100%; text-align: center; }
     h1 { font-size: 2.8rem; }
     .tagline { font-size: 1.2rem; }
     .summary { font-size: 1rem; }
-    #hero { padding: 60px 0 100px; }
-    nav { display: none; } /* Menu hamburguer no backlog */
-    .timeline { padding-left: 20px; }
-    .timeline-item .icon { left: -36px; }
+    .actions { flex-direction: column; width: 100%; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; max-width: 320px; }
+    .timeline { padding-left: 0; border-left: none; }
+    .timeline-item { flex-direction: column; align-items: stretch; }
+    .timeline-item .icon { position: relative; left: 0; top: 0; margin-bottom: 12px; }
+    .timeline-item .content { padding: 20px; }
+    #certificados { padding: 60px 0; }
+    #conteudo { padding: 80px 0; }
+    .youtube-container { flex-direction: column; text-align: center; padding: 30px 20px; }
+    .youtube-info { width: 100%; }
+    .btn-youtube { width: 100%; max-width: 320px; }
+    .project-card { padding: 25px; }
+    footer { padding: 40px 0; }
 }
+
 #conteudo { padding: 100px 0; border-top: 1px solid #1e293b; }
 
 .youtube-container { 
@@ -152,9 +176,6 @@ footer p { margin-bottom: 5px; }
 .video-destaque { flex: 1; }
 .video-destaque iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid #334155; }
 
-@media (max-width: 768px) {
-    .youtube-container { flex-direction: column; text-align: center; }
-}
 .project-card {
     background: linear-gradient(145deg, #0f172a, #1e293b);
     border: 1px solid #38bdf833;

@@ -1,0 +1,184 @@
+/* --- RESET E ESTILOS GERAIS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #050505; /* Preto mais profundo */
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+
+/* --- HEADER --- */
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 30px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.logo { font-size: 1.4rem; font-weight: 700; letter-spacing: -1px; font-family: 'Roboto Mono', monospace; }
+.logo span { color: #38bdf8; }
+
+nav a { color: #94a3b8; text-decoration: none; margin-left: 20px; font-size: 0.9rem; transition: 0.3s; font-weight: 600; }
+nav a:hover { color: #38bdf8; }
+
+/* --- HERO SECTION --- */
+#hero {
+    padding: 100px 0 150px;
+    position: relative;
+    text-align: center;
+}
+
+.hero-content { display: flex; align-items: center; justify-content: center; position: relative; z-index: 5; gap: 60px; }
+.hero-text { max-width: 800px; }
+
+.hero-image { flex-shrink: 0; }
+.hero-image img { width: 350px; height: auto; border-radius: 12px; box-shadow: 0 20px 60px rgba(56, 189, 248, 0.2); }
+
+h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; font-weight: 800; color: #fff; }
+
+.tagline { font-size: 1.6rem; color: #38bdf8; font-weight: 700; margin-bottom: 30px; letter-spacing: -1px; }
+
+.summary { color: #94a3b8; font-size: 1.2rem; margin-bottom: 50px; }
+
+.actions { display: flex; justify-content: center; gap: 20px; }
+.btn-primary { background: #38bdf8; color: #000; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+.btn-primary:hover { background: #fff; }
+.btn-secondary { border: 1px solid #334155; color: #fff; padding: 15px 35px; border-radius: 8px; text-decoration: none; transition: 0.3s; }
+.btn-secondary:hover { border-color: #38bdf8; color: #38bdf8; }
+
+/* Fundo abstrato (simulado com CSS) */
+.network-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, rgba(5, 5, 5, 0) 70%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* --- TRAJETÓRIA (TIMELINE) --- */
+#trajetoria { padding: 100px 0; }
+#trajetoria h2 { text-align: center; font-size: 2.5rem; margin-bottom: 80px; }
+
+.timeline {
+    border-left: 3px solid #1e293b;
+    margin: 0 auto;
+    padding-left: 30px;
+    position: relative;
+    max-width: 800px;
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-item .icon {
+    font-size: 1.5rem;
+    position: absolute;
+    left: -48px;
+    top: -5px;
+    background: #050505;
+    padding: 5px;
+}
+
+.timeline-item .content {
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    width: 100%;
+}
+
+.timeline-item h3 { color: #38bdf8; margin-bottom: 10px; font-size: 1.2rem; }
+.timeline-item p { color: #94a3b8; font-size: 1rem; }
+.timeline-item strong { color: #fff; }
+
+/* --- ALURA / CERTIFICADOS --- */
+#certificados { text-align: center; padding: 80px 0; border-top: 1px solid #1e293b; }
+.alura-badge { display: flex; align-items: center; justify-content: center; gap: 15px; background: #111827; padding: 20px 40px; border-radius: 30px; border: 1px solid #38bdf8; display: inline-flex; }
+.alura-badge img { height: 30px; }
+.alura-badge p { color: #fff; font-weight: 600; }
+
+/* --- FOOTER --- */
+footer { padding: 60px 0; text-align: center; border-top: 1px solid #1e293b; color: #475569; font-size: 0.85rem; }
+footer p { margin-bottom: 5px; }
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    .tagline { font-size: 1.2rem; }
+    .summary { font-size: 1rem; }
+    #hero { padding: 60px 0 100px; }
+    nav { display: none; } /* Menu hamburguer no backlog */
+    .timeline { padding-left: 20px; }
+    .timeline-item .icon { left: -36px; }
+}
+#conteudo { padding: 100px 0; border-top: 1px solid #1e293b; }
+
+.youtube-container { 
+    display: flex; 
+    gap: 40px; 
+    align-items: center; 
+    background: #0f172a; 
+    padding: 40px; 
+    border-radius: 15px; 
+    border: 1px solid #ff000033; /* Um brilho vermelho sutil */
+}
+
+.youtube-info { flex: 1; text-align: left; }
+.youtube-info p { margin-bottom: 20px; font-size: 1.1rem; color: #94a3b8; }
+
+.btn-youtube { 
+    display: inline-block;
+    background: #ff0000; 
+    color: #fff; 
+    padding: 12px 25px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: 700; 
+    transition: 0.3s;
+}
+
+.btn-youtube:hover { background: #cc0000; box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
+
+.video-destaque { flex: 1; }
+.video-destaque iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid #334155; }
+
+@media (max-width: 768px) {
+    .youtube-container { flex-direction: column; text-align: center; }
+}
+.project-card {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    border: 1px solid #38bdf833;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.tech-stack span {
+    background: #38bdf822;
+    color: #38bdf8;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#inovacao {
+    margin-top: 120px;
+}

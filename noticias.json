@@ -1,0 +1,17 @@
+{
+"status": "ok",
+"articles": [
+{
+"title": "IA Generativa na Prática",
+"description": "Como a DoriVox está aplicando IA para soluções reais.",
+"url": "https://dorivalok.github.io",
+"image": "https://via.placeholder.com/300"
+},
+{
+"title": "O Legado do TK90X",
+"description": "De onde veio a base para a engenharia moderna.",
+"url": "https://dorivalok.github.io",
+"image": "https://via.placeholder.com/300"
+}
+]
+}
